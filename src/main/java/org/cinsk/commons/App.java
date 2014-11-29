@@ -4,6 +4,7 @@ import java.util.*;
 import java.io.*;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.PropertyConfigurator;
 
 import org.apache.commons.cli.*;
@@ -15,6 +16,7 @@ public class App {
         CommandLineParser cliParser = new GnuParser();
         CommandLine cmd = null;
         Properties properties = new Properties();
+        BasicConfigurator.configure();
 
         try {
             cmd = cliParser.parse(buildOptions(), args);
@@ -27,6 +29,7 @@ public class App {
         if (cmd.hasOption("help")) {
             helpAndExit();
         }
+
         if (cmd.hasOption("properties")) {
             String propFilename = cmd.getOptionValue("properties");
             PropertyConfigurator.configure(propFilename);
