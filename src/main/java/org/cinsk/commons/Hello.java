@@ -9,8 +9,8 @@ import org.apache.log4j.PropertyConfigurator;
 
 import org.apache.commons.cli.*;
 
-public class App {
-    private static Logger log = Logger.getLogger(App.class);
+public class Hello {
+    private static Logger log = Logger.getLogger(Hello.class);
 
     public static void main(String[] args) {
         CommandLineParser cliParser = new GnuParser();

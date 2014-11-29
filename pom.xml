@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.cinsk.commons</groupId>
-  <artifactId>java-skeleton</artifactId>
+  <artifactId>hello</artifactId>
   <packaging>jar</packaging>
   <version>0.1-SNAPSHOT</version>
-  <name>java-skeleton</name>
+  <name>hello</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -37,7 +37,7 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>org.cinsk.commons.App</mainClass>
+          <mainClass>org.cinsk.commons.Hello</mainClass>
           <arguments>
             <argument>argument1</argument>
           </arguments>
@@ -73,10 +73,10 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <version>2.5.2</version>
         <configuration>
-          <finalName>java-skeleton-${project.version}</finalName>
+          <finalName>hello-${project.version}</finalName>
           <archive>
             <manifest>
-              <mainClass>org.cinsk.commons.App</mainClass>
+              <mainClass>org.cinsk.commons.Hello</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
